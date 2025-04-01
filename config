@@ -1,0 +1,11 @@
+ngx_addon_name=ngx_http_hello_world
+
+# Добавляем модуль в список HTTP-модулей
+HTTP_MODULES="$HTTP_MODULES ngx_http_hello_world"
+
+# Указываем исходные файлы модуля
+NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_hello_world.c"
+
+# Флаги для компиляции и линковки
+CFLAGS="$CFLAGS -I/opt/homebrew/opt/hiredis"     # Путь к hiredis headers
+CORE_LIBS="$CORE_LIBS -lhiredis"            # Линковка с библиотекой hiredis
