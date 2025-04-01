@@ -7,5 +7,5 @@ HTTP_MODULES="$HTTP_MODULES ngx_http_hello_world"
 NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_hello_world.c"
 
 # Флаги для компиляции и линковки
-CFLAGS="$CFLAGS -I/opt/homebrew/opt/hiredis"     # Путь к hiredis headers
+CFLAGS="$CFLAGS -I/opt/homebrew/opt/hiredis/include"     # Путь к hiredis headers
 CORE_LIBS="$CORE_LIBS -lhiredis"            # Линковка с библиотекой hiredis
